@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum — GTA 6 Trophy Guide &amp; Tracker</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23ff6b4a'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%231a0d08' font-family='Georgia,serif' font-weight='bold'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <h1>Leonida Platinum</h1>
+    <p class="tag">The offline GTA 6 trophy guide &amp; tracker — all 55 PlayStation 5 trophies, with a roadmap to the platinum.</p>
+  </div>
+  <div class="progress" id="progressBox" aria-label="Progress">
+    <div class="bigcount"><span id="earnedCount">0</span><span class="of">/ 55</span></div>
+    <div class="bar"><div class="fill" id="progressFill" style="width:0%"></div></div>
+    <p class="pct" id="progressPct">0% to the platinum</p>
+    <p class="grades" id="gradeCounts"></p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Views">
+  <button data-view="checklist" class="active">Checklist</button>
+  <button data-view="roadmap">Roadmap</button>
+  <button data-view="missables">Missables</button>
+  <button data-view="nextup">Next up</button>
+</nav>
+
+<section class="toolbar" id="toolbar">
+  <input id="search" type="search" placeholder="Search trophies by name or guide…" aria-label="Search trophies">
+  <select id="kindFilter" aria-label="Filter by kind">
+    <option value="all">All kinds</option>
+    <option value="story">Story</option>
+    <option value="missable">Missable</option>
+    <option value="collectible">Collectibles</option>
+    <option value="activity">Activities</option>
+    <option value="challenge">Challenges</option>
+    <option value="side">Side &amp; world</option>
+  </select>
+  <select id="gradeFilter" aria-label="Filter by grade">
+    <option value="all">All grades</option>
+    <option value="platinum">Platinum</option>
+    <option value="gold">Gold</option>
+    <option value="silver">Silver</option>
+    <option value="bronze">Bronze</option>
+  </select>
+  <label class="check"><input type="checkbox" id="spoilerToggle"> Spoiler-free (hide story trophies until earned)</label>
+  <label class="check"><input type="checkbox" id="hideEarned"> Hide earned</label>
+  <button id="exportBtn" type="button">Export progress</button>
+  <label class="importBtn" for="importFile">Import progress</label>
+  <input id="importFile" type="file" accept="application/json,.json" hidden>
+  <button id="resetBtn" type="button">Reset</button>
+</section>
+
+<main class="layout">
+  <section class="listPane">
+    <p class="hint" id="listHint"></p>
+    <ul class="trophies" id="trophyList"></ul>
+    <div class="page" id="pageView" hidden></div>
+  </section>
+  <aside class="detail" id="detailPane" aria-label="Trophy guide">
+    <p class="detailEmpty">Select a trophy to read its guide, sources and missable warning.</p>
+  </aside>
+</main>
+
+<footer class="foot">
+  <p>Official trophy names, descriptions and grades: Exophase and PSNProfiles, as listed before this bounty opened (2026-11-18). Every guide is written for this entry from the official descriptions; where a place or trigger is not pinned down by the official description, the guide says so. No Rockstar Games artwork is used. Works fully offline — progress is saved in your browser (localStorage) and never leaves your device.</p>
+  <p>No online trophies exist in the official list, so there is no online filter to show. Progress export downloads a JSON file; import reads that file back.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
